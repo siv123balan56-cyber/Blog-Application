@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>MyBlog</h2>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('login')">Login</a>
+        <a href="#" onclick="showPage('register')">Register</a>
+        <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+    </nav>
+</header>
+
+<section id="home" class="page">
+    <h1>Welcome to My Blog</h1>
+    <p>Share your thoughts and ideas with the world.</p>
+    <button onclick="showPage('login')">Get Started</button>
+    <div id="blogList"></div>
+</section>
+
+<section id="login" class="page hidden">
+    <h1>Login</h1>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMessage"></p>
+</section>
+
+<section id="register" class="page hidden">
+    <h1>Create Account</h1>
+    <input type="text" id="regName" placeholder="Your Name">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <p id="registerMessage"></p>
+</section>
+
+<section id="dashboard" class="page hidden">
+    <h1>Dashboard</h1>
+    <h3>Welcome, <span id="userName">User</span></h3>
+    <button onclick="showPage('create')">Create New Blog</button>
+    <button onclick="logout()">Logout</button>
+    <div id="dashboardBlogs"></div>
+</section>
+
+<section id="create" class="page hidden">
+    <h1>Create Blog</h1>
+    <input type="text" id="blogTitle" placeholder="Blog Title">
+    <textarea id="blogContent" placeholder="Write your blog here..."></textarea>
+    <button onclick="createBlog()">Publish Blog</button>
+    <p id="blogMessage"></p>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #183477;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 8px 10px;
+}
+
+nav a:hover {
+    color: #16a6a1;
+}
+
+.page {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 75vh;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #183477;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 15px;
+    overflow-wrap: anywhere;
+}
+
+input, textarea {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    padding: 13px;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #16a6a1;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background: #16a6a1;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #117e7a;
+}
+
+.blog-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.blog-card h2 {
+    color: #183477;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 12px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    nav a {
+        margin: 3px;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .page {
+        padding: 30px 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+        padding: 11px 18px;
+    }
+
+    .blog-card {
+        padding: 15px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 350px) {
+    nav {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 6px 3px;
+    }
+}
